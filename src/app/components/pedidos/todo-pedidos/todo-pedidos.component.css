@@ -3,7 +3,37 @@
 }
 .pedidoCliente{
     font-size: 11px;
+    margin: 6px;
 }
 .card-price{
     font-size: 10px;
+    float: right;
+}
+.valoresTotais{
+    background-color:#f1f3f5;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    font-size: 11px;
+}
+.desconto{
+    color: red;
+}
+.totais{
+    font-weight: bold;
+}
+.tipoPagamento{
+    margin: 10px;
+}
+.pagamento{
+    font-size: 11px;
+}
+.entrega{
+    margin: 10px;
+}
+.btn-lg {
+    font-size: 12px !important;
+    margin: 0 auto;
+    display: block;
+    background-color: #ff6927;  
 }

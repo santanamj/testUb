@@ -8,7 +8,7 @@ import { AdminLayoutModule } from './layouts/admin-layout/admin-layout.module';
 export const AppRoutes: Routes = [
   {
     path: '',
-    redirectTo: 'dashboard',
+    redirectTo: 'pedidos',
     pathMatch: 'full',
   }, {
     path: '',
@@ -18,18 +18,17 @@ export const AppRoutes: Routes = [
       path: '',
       loadChildren: ()=> import('./layouts/admin-layout/admin-layout.module')
       .then(m => m.AdminLayoutModule)
-     
   }]},
   {
     path: '',
     component: AdminLayoutComponent,
   children: [
     {path: 'pedidos', component: PedidosComponent,
-    loadChildren: ()=> import('./layouts/admin-layout/admin-layout.module')
-  .then(m => m.AdminLayoutModule)
+    loadChildren: ()=> import('./components/pedidos/pedido.module')
+  .then(m => m.PedidoModule)
 }]},
   {
     path: '**',
-    redirectTo: 'dashboard'
+    redirectTo: 'pedidos'
   }
 ]

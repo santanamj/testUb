@@ -95,7 +95,11 @@
 
             &.active > a,
             &.active > a > i {
-              opacity: 1;
+                color: #212529 !important;
+                opacity: 1;
+                background: #e5eaf0;
+                border-radius: 10px;
+                font-weight: bold;
             }
 
             &:hover:not(.active) > a,

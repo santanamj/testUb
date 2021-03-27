@@ -9,10 +9,10 @@
       "status": "Pendente",     
      "horas": "22:50",
      "horasEntrega": "22:50",
-     "CustomerDelivery":"000001",
-     "DeliveryStore":"01",
-     "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Cartão de débito na entrega",
      "Nature":"0000000001",
      "Items":[
         {
@@ -45,16 +45,16 @@
      "id": "02",     
      "numeronumeroPedido": "2356",
      "numeroPedido": "2256",
-     "cliente":"Leandro da Silva",
-     "cpf": "235.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Pendente",
      "horas": "22:50",
      "horasEntrega": "22:50",
-     "CustomerDelivery":"000001",
-     "DeliveryStore":"01",
-     "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":0,
+     "totalPreco":150,
+     "tipoPagamento":"Cartão de crédito na entrega",
      "Nature":"0000000001",
      "Items":[
         {
@@ -93,8 +93,8 @@
   {
    "id": "03",  
    "numeroPedido": "1356",
-     "cliente":"Juliane Santos",
-     "cpf": "157.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Em Preparo",
      "horas": "22:50",
@@ -102,7 +102,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Pagamento em dinheiro",
      "Nature":"0000000001",
      "Items":[
         {
@@ -134,8 +137,8 @@
   {
       "id": "04",  
       "numeroPedido": "1435",
-     "cliente":"Maria Silva",
-     "cpf": "397.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Despachado",
      "horas": "22:50",
@@ -143,7 +146,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Cartão de crédito pelo app",
      "Nature":"0000000001",
      "Items":[
         {
@@ -175,8 +181,8 @@
   {
       "id": "05",
       "numeroPedido": "6985",
-     "cliente":"Luciano Silveira",
-     "cpf": "825.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Despachado",
      "horas": "22:50",
@@ -184,7 +190,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Cartão de débito na entrega",
      "Nature":"0000000001",
      "Items":[
         {
@@ -216,8 +225,8 @@
   {
       "id": "06",
       "numeroPedido": "1256",
-     "cliente":"Daniel Barboza",
-     "cpf": "059.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Pendente",
      "horas": "22:50",
@@ -225,7 +234,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Pagamento via pix",
      "Nature":"0000000001",
      "Items":[
         {
@@ -257,8 +269,8 @@
   {
       "id": "07",  
       "numeroPedido": "1784",
-     "cliente":"000007",
-     "cpf": "398.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Pendente",
      "horas": "22:50",
@@ -266,7 +278,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Cartão de crédito pelo app",
      "Nature":"0000000001",
      "Items":[
         {
@@ -298,8 +313,8 @@
   {
       "id": "08",  
       "numeroPedido": "2568",
-     "cliente":"Anderson Lopes",     
-     "cpf": "365.265.365.25",
+     "cliente":"Marcos Santana",     
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Em preparo",
      "horas": "22:50",
@@ -307,7 +322,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Cartão de crédito na entrega",
      "Nature":"0000000001",
      "Items":[
         {
@@ -339,8 +357,8 @@
   {
      "id": "09",
      "numeroPedido": "2356",
-     "cliente":"Géssica Figueiredo",
-     "cpf": "215.265.365.25",
+     "cliente":"Marcos Santana",
+     "cpf": "025.265.365.25",
      "Store":"01",
      "status": "Em preparo",
      "horas": "22:50",
@@ -349,7 +367,10 @@
      "CustomerDelivery":"000001",
      "DeliveryStore":"01",
      "PaymentTerms":"000",
-     "MessageForNote":"Mensagem para nota",
+     "subtotal":150,
+     "desconto":10,
+     "totalPreco":140,
+     "tipoPagamento":"Pagamento em dinheiro",
      "Nature":"0000000001",
      "Items":[
         {

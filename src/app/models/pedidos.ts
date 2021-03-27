@@ -10,6 +10,7 @@ export interface Pedidos {
     subtotal: number;
     desconto: number;
     totalPreco: number;
+    tipoPagamento: string;
     CustomerDelivery: string;
     pendente:  boolean;
     emProcesso: boolean;

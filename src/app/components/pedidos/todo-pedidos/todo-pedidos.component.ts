@@ -12,8 +12,7 @@ export class TodoPedidosComponent  {
   @Input()
   pedidos: Pedidos[];
   @Input() pedido;
-  @Output()
-  toggle = new EventEmitter<any>();
+ 
   constructor(
     private pedidoService: PedidosService
   ) {}
@@ -21,9 +20,6 @@ export class TodoPedidosComponent  {
     const pedido = this.pedidos[index];
     this.pedido = pedido
     this.pedidoService.getPedido(pedido)
-    this.toggle.emit({
-      pedido: { ...pedido }
-    });
     }
   }
 

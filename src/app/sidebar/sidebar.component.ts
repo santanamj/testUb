@@ -9,15 +9,14 @@ export interface RouteInfo {
 }
 
 export const ROUTES: RouteInfo[] = [
-    { path: '/pedidos',     title: 'Pedidos',         icon:'nc-bank',       class: '' },
-    { path: '/dashboard',     title: 'Dashboard',         icon:'nc-bank',       class: '' },
-    { path: '/icons',         title: 'Icons',             icon:'nc-diamond',    class: '' },
-    { path: '/maps',          title: 'Maps',              icon:'nc-pin-3',      class: '' },
-    { path: '/notifications', title: 'Notifications',     icon:'nc-bell-55',    class: '' },
-    { path: '/user',          title: 'User Profile',      icon:'nc-single-02',  class: '' },
-    { path: '/table',         title: 'Table List',        icon:'nc-tile-56',    class: '' },
-    { path: '/typography',    title: 'Typography',        icon:'nc-caps-small', class: '' },
-    { path: '/upgrade',       title: 'Upgrade to PRO',    icon:'nc-spaceship',  class: 'active-pro' },
+    { path: '/dashboard',          title: 'Inicio',             icon:'',       class: '' },
+    { path: '/pedidos',          title: 'Pedidos',           icon:'',       class: '' },
+    { path: '/historico',          title: 'Histórico',          icon:'',       class: '' },
+    { path: '/meus-produtos',          title: 'Meus produtos',        icon:'',    class: '' },
+    { path: '/financeiro',          title: 'Financeiro',         icon:'',      class: '' },
+    { path: '/perfil',          title: 'Meu perfil',       icon:'',    class: '' },
+    { path: '/suporte',          title: 'suporte',      icon:'',  class: '' },
+  
 ];
 
 @Component({

@@ -54,34 +54,68 @@
          <div class="row pedidoCliente" *ngFor="let item of pedido.Items">
              <div class="col-3">
                 <p class="card-category">Quant.</p>
-                {{item.SalesQuantity}}
+                {{item?.SalesQuantity}}
              </div>
              <div class="col-6 ">
                 <p class="card-category">Produto</p>
-                <p> {{item.Product}}</p>
+                <p> {{item?.Product}}</p>
             </div>
             <div class="col-3">
                 <p class="card-category">Preço</p>
-             <div class="card-price">   {{item.SalesPrice | currency:'BRL':true}}</div>
+             <div class="card-price">   {{item?.SalesPrice | currency:'BRL':true}}</div>
             </div>
-            <div class="card-header">
-                Featured
-              </div>
+           
          </div>
-        
-          <div class="card-footer ">
-            <div class="legend">
-              <i class="fa fa-circle text-primary"></i> Opened
-              <i class="fa fa-circle text-warning"></i> Read
-              <i class="fa fa-circle text-danger"></i> Deleted
-              <i class="fa fa-circle text-gray"></i> Unopened
+         <div class="valoresTotais">
+             <div class="row">
+            <div class="col-6">
+                <p class="card-category">SubTotal</p>
+            
             </div>
-            <hr>
-            <div class="stats">
-              <i class="fa fa-calendar"></i> Number of emails sent
+            <div class="col-6">             
+             <div class="card-price">   {{pedido.subtotal | currency:'BRL':true}}</div>
             </div>
-          </div>
         </div>
+        <div class="row">
+            <div class="col-6">
+                <p class="card-category">Desconto</p>
+            
+            </div>
+            <div class="col-6">             
+             <div class="card-price" *ngIf="pedido.desconto > 0">
+             <span class="desconto">- {{pedido.desconto | currency:'BRL':true}}</span></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <p class="card-category">Total do pedido</p>
+            
+            </div>
+            <div class="col-6">             
+             <div class="card-price"><span class="totais">{{pedido.totalPreco | currency:'BRL':true}}</span></div>
+            </div>
+        </div>
+          </div>
+         
+        
+         
+        </div>
+        <div class="card " *ngIf="pedido">   
+            <div class="tipoPagamento">           
+            <span class="card-category pagamento">Pagamento</span><br/>          
+           {{pedido?.tipoPagamento}}</div>
+        </div>
+        <div class="card " *ngIf="pedido">  
+            <div class="tipoPagamento">   
+            <span class="card-category ">Entrega</span>                                                   
+            <div class="col" *ngFor="let item of pedido?.endereco">               
+              {{item?.logradouro}}, {{item?.numero}} 
+               {{item?.complemento}}
+               </div> 
+             <p>  <button *ngIf="pedido?.status !='Despachado'" type="button" class="btn btn-warning btn-lg">Solicitar entregador</button></p>
+            </div>        
+        </div>
+     
       </div>
   </div>
 </div>

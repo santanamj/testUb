@@ -1,0 +1,87 @@
+
+<div class="container">
+<div class="row " >   
+    <div class="col-md-8 pedidos" >
+      <div class="card card-chart" *ngFor="let item of pedidos; index as i">
+        <div class="card-header">
+          
+        </div>
+        <div  >
+            <div class="card-body">
+                <span (click)="toggleItem(i,'finalizar')">
+                <div class="row">
+                   
+                    <div class="col">
+                        <p class="card-category">Cliente</p>                                                   
+                        <h6 class="card-text client-name"> {{item?.cliente}}</h6>
+                              <p class="card-category">{{item?.horas}}</p>                
+                    </div>
+                    <div class="col-4" *ngFor="let endereco of item.endereco">
+                        <p class="card-category"  >Endereço</p>
+                       <p> {{endereco?.logradouro}}, {{endereco?.numero}} </p>
+                       <p>{{endereco?.complemento}}</p>
+                        
+                    </div>
+                    <div class="col">
+                     <p>   <span *ngIf="item?.status =='Pendente'" class="badge badge-danger">{{item?.status}}</span>
+                        <span *ngIf="item?.status =='Em Preparo'" class="badge badge-warning">{{item?.status}}</span>
+                        <span *ngIf="item?.status =='Despachado'" class="badge badge-success">{{item?.status}}</span>
+                    </p> 
+                        <h6 class="card-text client-name"> Delivery</h6>
+                        Entregar até {{item?.horasEntrega}}
+                    </div>
+                </div>     </span>  
+               </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 pedido">
+        <div class="card" style="width: 18rem;">           
+            <div class="card-body">
+                <div *ngIf="!pedido" class="card-text">Selecione um pedido</div>
+              <h5 *ngIf="pedido" class="card-text">#{{pedido?.numeroPedido}}</h5>              
+            </div>
+          </div>
+          <div class="card" style="width: 18rem;">           
+            <div *ngIf="pedido" class="card-body">
+               
+                <p class="card-category">Cliente</p>                                                   
+                <h6 class="card-text client-name"> {{pedido?.cliente}}</h6>
+                      <p class="card-category">{{pedido?.cpf}}</p>              
+            </div>
+          </div>
+        <div *ngIf="pedido" class="card" style="width: 18rem;">
+         <div class="row pedidoCliente" *ngFor="let item of pedido.Items">
+             <div class="col-3">
+                <p class="card-category">Quant.</p>
+                {{item.SalesQuantity}}
+             </div>
+             <div class="col-6 ">
+                <p class="card-category">Produto</p>
+                <p> {{item.Product}}</p>
+            </div>
+            <div class="col-3">
+                <p class="card-category">Preço</p>
+             <div class="card-price">   {{item.SalesPrice | currency:'BRL':true}}</div>
+            </div>
+            <div class="card-header">
+                Featured
+              </div>
+         </div>
+        
+          <div class="card-footer ">
+            <div class="legend">
+              <i class="fa fa-circle text-primary"></i> Opened
+              <i class="fa fa-circle text-warning"></i> Read
+              <i class="fa fa-circle text-danger"></i> Deleted
+              <i class="fa fa-circle text-gray"></i> Unopened
+            </div>
+            <hr>
+            <div class="stats">
+              <i class="fa fa-calendar"></i> Number of emails sent
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
